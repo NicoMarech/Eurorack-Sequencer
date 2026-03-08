@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "BlinkingLed: CMake Configure Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/BlinkingLed"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BlinkingLed: CMake Build Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/BlinkingLed"
+      },
+      "dependsOn": "BlinkingLed: CMake Configure Debug",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "LCDBasic: CMake Configure Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/LCDBasic"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LCDBasic: CMake Build Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/LCDBasic"
+      },
+      "dependsOn": "LCDBasic: CMake Configure Debug",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
