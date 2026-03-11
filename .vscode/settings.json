@@ -1,10 +1,75 @@
 {
-  "cmake.sourceDirectory": "${workspaceFolder}/BlinkingLed",
-  "cmake.buildDirectory": "${workspaceFolder}/BlinkingLed/build/${buildType}",
+  "cmake.sourceDirectory": "${workspaceFolder}/Sequencer",
+  "cmake.buildDirectory": "${workspaceFolder}/Sequencer/build/${buildType}",
   "cmake.configureOnOpen": true,
+  "files.exclude": {
+    "**/BlinkingLed": true
+  },
   "editor.multiCursorModifier": "alt",
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "C_Cpp.default.compileCommands": "${workspaceFolder}/BlinkingLed/build/Debug/compile_commands.json",
-  "C_Cpp.default.compilerPath": "C:/ST/STM32CubeCLT_1.20.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
-  "C_Cpp.intelliSenseEngine": "default"
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/Sequencer/build/Debug/compile_commands.json",
+  "C_Cpp.default.compilerPath": "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.enhancedColorization": "Enabled",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "property:cpp": "#7FB3FF",
+      "member:cpp": "#7FB3FF",
+      "variable:cpp": "#7EE787",
+      "variable.local:cpp": "#7EE787",
+      "variable.constant:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "property.constant:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "member.readonly:cpp": {
+        "foreground": "#EBCB8B"
+      },
+      "member.readonly.static:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "member.static.readonly:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "member.static:cpp": {
+        "foreground": "#D19A66"
+      },
+      "variable.readonly.static:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "variable.static.readonly:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "property.readonly.static:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "property.static.readonly:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      },
+      "variable.readonly:cpp": {
+        "foreground": "#EBCB8B"
+      },
+      "property.readonly:cpp": {
+        "foreground": "#EBCB8B"
+      },
+      "property.static:cpp": {
+        "foreground": "#D19A66"
+      },
+      "variable.static:cpp": {
+        "foreground": "#FFB86C",
+        "fontStyle": "bold"
+      }
+    }
+  }
 }

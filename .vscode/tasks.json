@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "BlinkingLed: CMake Configure Debug",
+      "label": "Sequencer: CMake Configure Debug",
       "type": "shell",
       "command": "cmake",
       "args": [
@@ -10,12 +10,12 @@
         "Debug"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/BlinkingLed"
+        "cwd": "${workspaceFolder}/Sequencer"
       },
       "problemMatcher": []
     },
     {
-      "label": "BlinkingLed: CMake Build Debug",
+      "label": "Sequencer: CMake Build Debug",
       "type": "shell",
       "command": "cmake",
       "args": [
@@ -24,38 +24,9 @@
         "Debug"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/BlinkingLed"
+        "cwd": "${workspaceFolder}/Sequencer"
       },
-      "dependsOn": "BlinkingLed: CMake Configure Debug",
-      "group": "build",
-      "problemMatcher": []
-    },
-    {
-      "label": "LCDBasic: CMake Configure Debug",
-      "type": "shell",
-      "command": "cmake",
-      "args": [
-        "--preset",
-        "Debug"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/LCDBasic"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "LCDBasic: CMake Build Debug",
-      "type": "shell",
-      "command": "cmake",
-      "args": [
-        "--build",
-        "--preset",
-        "Debug"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/LCDBasic"
-      },
-      "dependsOn": "LCDBasic: CMake Configure Debug",
+      "dependsOn": "Sequencer: CMake Configure Debug",
       "group": {
         "kind": "build",
         "isDefault": true
