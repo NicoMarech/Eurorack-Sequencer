@@ -1,0 +1,51 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# VS Code local settings and caches
+.vscode/
+*.code-workspace
+
+# CMake and Ninja build artifacts (all projects)
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/build.ninja
+**/.ninja_deps
+**/.ninja_log
+**/compile_commands.json
+
+# CMake API/reply cache
+**/.cmake/
+
+# Compiled objects and dependency files
+*.o
+*.obj
+*.d
+*.su
+*.lst
+
+# Static / shared libraries
+*.a
+*.lib
+*.so
+*.dll
+
+# Linker outputs / firmware images
+*.elf
+*.map
+*.hex
+*.bin
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# STM32CubeIDE / Eclipse metadata (if generated)
+.project
+.cproject
+.settings/
+.mxproject
