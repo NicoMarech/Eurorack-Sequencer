@@ -9,6 +9,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "lcd1602.h"
@@ -44,11 +45,50 @@ uint16_t EncoderVal;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void shift595_write(uint8_t value);
+void shift595_drive_led(uint8_t anode_bit, uint8_t cathode_bit, bool on);
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void shift595_write(uint8_t value)
+{
+    HAL_GPIO_WritePin(SHIFTRES_RCLK_GPIO_Port, SHIFTRES_RCLK_Pin, GPIO_PIN_RESET);
+    HAL_SPI_Transmit(&hspi2, &value, 1, HAL_MAX_DELAY);
+    HAL_GPIO_WritePin(SHIFTRES_RCLK_GPIO_Port, SHIFTRES_RCLK_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(SHIFTRES_RCLK_GPIO_Port, SHIFTRES_RCLK_Pin, GPIO_PIN_RESET);
+}
+
+void shift595_drive_led(uint8_t anode_bit, uint8_t cathode_bit, bool on)
+{
+    constexpr uint8_t ANODE_MASK = 0x0FU;   // QA..QD
+    constexpr uint8_t CATHODE_MASK = 0xF0U; // QE..QH
+
+    if (!on)
+    {
+        // All anodes low, all cathodes high -> all LEDs off
+        shift595_write(CATHODE_MASK);
+        return;
+    }
+
+    if (anode_bit > 3U || cathode_bit < 4U || cathode_bit > 7U)
+    {
+        shift595_write(CATHODE_MASK);
+        return;
+    }
+
+    // Start from OFF state: cathodes high, anodes low
+    uint8_t pattern = CATHODE_MASK;
+
+    // Set selected anode high
+    pattern = static_cast<uint8_t>((pattern & static_cast<uint8_t>(~ANODE_MASK)) | static_cast<uint8_t>(1U << anode_bit));
+
+    // Set selected cathode low
+    pattern = static_cast<uint8_t>(pattern & static_cast<uint8_t>(~(1U << cathode_bit)));
+
+    shift595_write(pattern);
+}
 
 /* USER CODE END 0 */
 
@@ -80,6 +120,7 @@ int main(void)
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_SPI2_Init();
     MX_USART2_UART_Init();
     MX_TIM2_Init();
     /* USER CODE BEGIN 2 */
@@ -101,6 +142,11 @@ int main(void)
         EncoderVal=__HAL_TIM_GET_COUNTER(&htim2);
         lcd.setCursor(0, 0);
         lcd.print("Encoder : " + std::to_string(EncoderVal));
+
+        shift595_drive_led(0U, 4U, true);  // QA high, QE low
+        HAL_Delay(500);
+        shift595_drive_led(0U, 4U, false);
+        HAL_Delay(500);
     }
     /* USER CODE END 3 */
 }
