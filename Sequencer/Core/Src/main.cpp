@@ -108,7 +108,11 @@ int main(void)
 
         ledMatrix.setLed(0U);
         HAL_Delay(500);
-        ledMatrix.clear();
+        //ledMatrix.clear();
+        HAL_Delay(500);
+        ledMatrix.setLed(1U);
+        HAL_Delay(500);
+        //ledMatrix.clear();
         HAL_Delay(500);
     }
     /* USER CODE END 3 */

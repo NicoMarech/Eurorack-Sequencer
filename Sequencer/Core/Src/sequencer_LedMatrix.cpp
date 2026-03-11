@@ -13,8 +13,8 @@ void LedMatrix::setLed(std::uint8_t inLedIndex)
         return;
     }
 
-    const std::uint8_t anodeBit = static_cast<std::uint8_t>(inLedIndex % LedMatrix::sMatrixSize);
-    const std::uint8_t cathodeBit = static_cast<std::uint8_t>(LedMatrix::sCathodeBaseBit + (inLedIndex / LedMatrix::sMatrixSize));
+    const std::uint8_t anodeBit = static_cast<std::uint8_t>(inLedIndex / LedMatrix::sMatrixSize);
+    const std::uint8_t cathodeBit = static_cast<std::uint8_t>(LedMatrix::sCathodeBaseBit + (inLedIndex % LedMatrix::sMatrixSize));
     std::uint8_t pattern = LedMatrix::sCathodeMask;
 
     pattern = static_cast<std::uint8_t>((pattern & static_cast<std::uint8_t>(~LedMatrix::sAnodeMask)) | static_cast<std::uint8_t>(1U << anodeBit));
