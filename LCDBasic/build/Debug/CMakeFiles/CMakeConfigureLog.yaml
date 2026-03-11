@@ -1,0 +1,720 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe 
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      0
+      ld.lld: warning: cannot find entry symbol _start; not setting start address
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/3.28.1/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe 
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags:  
+      
+      The output was:
+      0
+      ld.lld: warning: cannot find entry symbol _start; not setting start address
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/3.28.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5"
+      binary: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS_DEBUG: "-Og -g3"
+      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -lcrt0-hosted -z norelro -T \"D:/Electronique/STM32/BasicProject/LCDBasic/STM32F446XX_FLASH.ld\" -Wl,-Map=LCDBasic.map -Wl,--gc-sections -z noexecstack -Wl,--print-memory-usage "
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5'
+        
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_ed7eb
+        [1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -MD -MT CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ed7eb.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+        Target: arm-st-none-eabi
+        Thread model: posix
+        InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+         (in-process)
+         "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5 -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5 -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_ed7eb.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -std=gnu11 -ferror-limit 19 -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -x c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 19.1.6 based upon LLVM 19.1.6 default target 
+        ignoring duplicate directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include\x0d
+        End of search list.\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_ed7eb.a && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ar.exe qc libcmTC_ed7eb.a  CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ranlib.exe libcmTC_ed7eb.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        implicit include dirs: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(starm-clang\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_ed7eb]
+        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -MD -MT CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ed7eb.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)]
+        ignore line: [Target: arm-st-none-eabi]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin]
+        ignore line: [ (in-process)]
+        link line: [ "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5 -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5 -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_ed7eb.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -std=gnu11 -ferror-limit 19 -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj -x c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe] ==> ignore
+          arg [-cc1] ==> ignore
+          arg [-triple] ==> ignore
+          arg [thumbv7em-st-none-eabihf] ==> ignore
+          arg [-emit-obj] ==> ignore
+          arg [-disable-free] ==> ignore
+          arg [-clear-ast-before-backend] ==> ignore
+          arg [-disable-llvm-verifier] ==> ignore
+          arg [-discard-value-names] ==> ignore
+          arg [-main-file-name] ==> ignore
+          arg [CMakeCCompilerABI.c] ==> ignore
+          arg [-mrelocation-model] ==> ignore
+          arg [static] ==> ignore
+          arg [-mframe-pointer=all] ==> ignore
+          arg [-fmath-errno] ==> ignore
+          arg [-ffp-contract=on] ==> ignore
+          arg [-fno-rounding-math] ==> ignore
+          arg [-mconstructor-aliases] ==> ignore
+          arg [-nostdsysteminc] ==> ignore
+          arg [-target-cpu] ==> ignore
+          arg [cortex-m4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-crc] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-dotprod] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+dsp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-mve] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-mve.fp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-ras] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-bf16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-sb] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-i8mm] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-lob] ==> lib [ob]
+          arg [-target-feature] ==> ignore
+          arg [-cdecp0] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp1] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp3] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp5] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp6] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp7] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-pacbti] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-hwdiv-arm] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+hwdiv] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp2sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp3d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+fp16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp4d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fullfp16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp64] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-d32] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-neon] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp16fml] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-crypto] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-sha2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-aes] ==> ignore
+          arg [-target-abi] ==> ignore
+          arg [aapcs] ==> ignore
+          arg [-mfloat-abi] ==> ignore
+          arg [hard] ==> ignore
+          arg [-debugger-tuning=gdb] ==> ignore
+          arg [-fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5] ==> ignore
+          arg [-v] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-37fkd5] ==> ignore
+          arg [-resource-dir] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19] ==> ignore
+          arg [-dependency-file] ==> ignore
+          arg [CMakeFiles\\\\cmTC_ed7eb.dir\\\\CMakeCCompilerABI.c.obj.d] ==> ignore
+          arg [-MT] ==> ignore
+          arg [CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-sys-header-deps] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-std=gnu11] ==> ignore
+          arg [-ferror-limit] ==> ignore
+          arg [19] ==> ignore
+          arg [-fshort-enums] ==> ignore
+          arg [-fno-signed-char] ==> ignore
+          arg [-fgnuc-version=4.2.1] ==> ignore
+          arg [-fskip-odr-check-in-gmf] ==> ignore
+          arg [-faddrsig] ==> ignore
+          arg [-o] ==> ignore
+          arg [CMakeFiles/cmTC_ed7eb.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-x] ==> ignore
+          arg [c] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c] ==> ignore
+        implicit libs: [ob]
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe 
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      0
+      ld.lld: warning: cannot find entry symbol _start; not setting start address
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/3.28.1/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe 
+      Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags:  
+      
+      The output was:
+      0
+      ld.lld: warning: cannot find entry symbol _start; not setting start address
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/3.28.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns"
+      binary: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS_DEBUG: "-Og -g3"
+      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -lcrt0-hosted -z norelro -T \"D:/Electronique/STM32/BasicProject/LCDBasic/STM32F446XX_FLASH.ld\" -Wl,-Map=LCDBasic.map -Wl,--gc-sections -z noexecstack -Wl,--print-memory-usage "
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns'
+        
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_ac0c8
+        [1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -MD -MT CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ac0c8.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+        Target: arm-st-none-eabi
+        Thread model: posix
+        InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+         (in-process)
+         "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_ac0c8.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -std=gnu11 -ferror-limit 19 -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -x c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 19.1.6 based upon LLVM 19.1.6 default target 
+        ignoring duplicate directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include\x0d
+        End of search list.\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_ac0c8.a && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ar.exe qc libcmTC_ac0c8.a  CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ranlib.exe libcmTC_ac0c8.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        implicit include dirs: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(starm-clang\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_ac0c8]
+        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections  -std=gnu11   -v -MD -MT CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ac0c8.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)]
+        ignore line: [Target: arm-st-none-eabi]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin]
+        ignore line: [ (in-process)]
+        link line: [ "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_ac0c8.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -std=gnu11 -ferror-limit 19 -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj -x c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang.exe] ==> ignore
+          arg [-cc1] ==> ignore
+          arg [-triple] ==> ignore
+          arg [thumbv7em-st-none-eabihf] ==> ignore
+          arg [-emit-obj] ==> ignore
+          arg [-disable-free] ==> ignore
+          arg [-clear-ast-before-backend] ==> ignore
+          arg [-disable-llvm-verifier] ==> ignore
+          arg [-discard-value-names] ==> ignore
+          arg [-main-file-name] ==> ignore
+          arg [CMakeCCompilerABI.c] ==> ignore
+          arg [-mrelocation-model] ==> ignore
+          arg [static] ==> ignore
+          arg [-mframe-pointer=all] ==> ignore
+          arg [-fmath-errno] ==> ignore
+          arg [-ffp-contract=on] ==> ignore
+          arg [-fno-rounding-math] ==> ignore
+          arg [-mconstructor-aliases] ==> ignore
+          arg [-nostdsysteminc] ==> ignore
+          arg [-target-cpu] ==> ignore
+          arg [cortex-m4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-crc] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-dotprod] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+dsp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-mve] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-mve.fp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-ras] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-bf16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-sb] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-i8mm] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-lob] ==> lib [ob]
+          arg [-target-feature] ==> ignore
+          arg [-cdecp0] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp1] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp3] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp5] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp6] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-cdecp7] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-pacbti] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-hwdiv-arm] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+hwdiv] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp2sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp3d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp3sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+fp16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [+vfp4d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-vfp4sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8d16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8d16sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp-armv8sp] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fullfp16] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp64] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-d32] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-neon] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-fp16fml] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-crypto] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-sha2] ==> ignore
+          arg [-target-feature] ==> ignore
+          arg [-aes] ==> ignore
+          arg [-target-abi] ==> ignore
+          arg [aapcs] ==> ignore
+          arg [-mfloat-abi] ==> ignore
+          arg [hard] ==> ignore
+          arg [-debugger-tuning=gdb] ==> ignore
+          arg [-fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns] ==> ignore
+          arg [-v] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-2z5xns] ==> ignore
+          arg [-resource-dir] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19] ==> ignore
+          arg [-dependency-file] ==> ignore
+          arg [CMakeFiles\\\\cmTC_ac0c8.dir\\\\CMakeCCompilerABI.c.obj.d] ==> ignore
+          arg [-MT] ==> ignore
+          arg [CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-sys-header-deps] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti/include] ==> ignore
+          arg [-internal-isystem] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-std=gnu11] ==> ignore
+          arg [-ferror-limit] ==> ignore
+          arg [19] ==> ignore
+          arg [-fshort-enums] ==> ignore
+          arg [-fno-signed-char] ==> ignore
+          arg [-fgnuc-version=4.2.1] ==> ignore
+          arg [-fskip-odr-check-in-gmf] ==> ignore
+          arg [-faddrsig] ==> ignore
+          arg [-o] ==> ignore
+          arg [CMakeFiles/cmTC_ac0c8.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-x] ==> ignore
+          arg [c] ==> ignore
+          arg [C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c] ==> ignore
+        implicit libs: [ob]
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy"
+      binary: "D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
+      CMAKE_CXX_FLAGS_DEBUG: "-Og -g3"
+      CMAKE_EXE_LINKER_FLAGS: "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -lcrt0-hosted -z norelro -T \"D:/Electronique/STM32/BasicProject/LCDBasic/STM32F446XX_FLASH.ld\" -Wl,-Map=LCDBasic.map -Wl,--gc-sections -z noexecstack -Wl,--print-memory-usage "
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy'
+        
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_1c286
+        [1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -MD -MT CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_1c286.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+        Target: arm-st-none-eabi
+        Thread model: posix
+        InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+         (in-process)
+         "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_1c286.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include/c++/v1 -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1 -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -fdeprecated-macro -ferror-limit 19 -fno-rtti -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fno-threadsafe-statics -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 19.1.6 based upon LLVM 19.1.6 default target 
+        ignoring nonexistent directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include/c++/v1"
+        ignoring duplicate directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include\x0d
+         C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include\x0d
+        End of search list.\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_1c286.a && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ar.exe qc libcmTC_1c286.a  CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ranlib.exe libcmTC_1c286.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include]
+          add: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include]
+        collapse include dir [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include] ==> [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+        implicit include dirs: [C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include;C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:28 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(starm-clang\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.20.0/Ninja/bin/ninja.exe -v cmTC_1c286]
+        ignore line: [[1/2] C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-clang++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -MD -MT CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_1c286.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)]
+        ignore line: [Target: arm-st-none-eabi]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe" -cc1 -triple thumbv7em-st-none-eabihf -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -nostdsysteminc -target-cpu cortex-m4 -target-feature -crc -target-feature -dotprod -target-feature +dsp -target-feature -mve -target-feature -mve.fp -target-feature -ras -target-feature -bf16 -target-feature -sb -target-feature -i8mm -target-feature -lob -target-feature -cdecp0 -target-feature -cdecp1 -target-feature -cdecp2 -target-feature -cdecp3 -target-feature -cdecp4 -target-feature -cdecp5 -target-feature -cdecp6 -target-feature -cdecp7 -target-feature -pacbti -target-feature -hwdiv-arm -target-feature +hwdiv -target-feature -vfp2 -target-feature +vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature +vfp3d16sp -target-feature -vfp3sp -target-feature +fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature +vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -fp16fml -target-feature -crypto -target-feature -sha2 -target-feature -aes -target-abi aapcs -mfloat-abi hard -debugger-tuning=gdb -fdebug-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=D:/Electronique/STM32/BasicProject/LCDBasic/build/Debug/CMakeFiles/CMakeScratch/TryCompile-7d7xhy -resource-dir C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_1c286.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include/c++/v1 -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1 -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include -internal-isystem C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include -Wall -Wall -fdeprecated-macro -ferror-limit 19 -fno-rtti -fshort-enums -fno-signed-char -fgnuc-version=4.2.1 -fno-threadsafe-statics -fskip-odr-check-in-gmf -faddrsig -o CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 19.1.6 based upon LLVM 19.1.6 default target ]
+        ignore line: [ignoring nonexistent directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include/c++/v1"]
+        ignore line: [ignoring duplicate directory "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include/c++/v1\x0d]
+        ignore line: [ C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang/19/include\x0d]
+        ignore line: [ C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16/include\x0d]
+        ignore line: [ C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/lib/clang-runtimes/arm-none-eabi/include\x0d]
+        ignore line: [End of search list.\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_1c286.a && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ar.exe qc libcmTC_1c286.a  CMakeFiles/cmTC_1c286.dir/CMakeCXXCompilerABI.cpp.obj && C:\\ST\\STM32CubeCLT_1.20.0\\st-arm-clang\\bin\\starm-ranlib.exe libcmTC_1c286.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:32 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+      Target: arm-st-none-eabi
+      Thread model: posix
+      InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:32 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
+      STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+      Target: arm-st-none-eabi
+      Thread model: posix
+      InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "C:/ST/STM32CubeCLT_1.20.0/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:32 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is Clang using "--version" matched "(clang version)":
+      STMicroelectronics Arm Clang Toolchain -- clang version 19.1.6 (git@github.st.com:CCC/llvm-project.git 4b4ede81eaafdfafc7763601a296c349a0fc28b2)
+      Target: arm-st-none-eabi
+      Thread model: posix
+      InstalledDir: C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin
+...
