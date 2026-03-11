@@ -1,0 +1,13 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "STM32F446-Sequencer-Debug",
+      "compilerPath": "C:/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin/starm-clang++.exe",
+      "compileCommands": "${workspaceFolder}/Sequencer/build/Debug/compile_commands.json",
+      "intelliSenseMode": "gcc-arm",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++17"
+    }
+  ]
+}

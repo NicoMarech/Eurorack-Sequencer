@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "STM32F446 Debug (ST-LINK GDB Server) - Sequencer",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/Sequencer",
+      "servertype": "stlink",
+      "serverpath": "C:/ST/STM32CubeCLT_1.20.0/STLink-gdb-server/bin/ST-LINK_gdbserver.exe",
+      "stm32cubeprogrammer": "C:/ST/STM32CubeCLT_1.20.0/STM32CubeProgrammer/bin",
+      "gdbPath": "C:/ST/STM32CubeCLT_1.20.0/GNU-tools-for-STM32/bin/arm-none-eabi-gdb.exe",
+      "executable": "${workspaceFolder}/Sequencer/build/Debug/Sequencer.elf",
+      "device": "STM32F446RE",
+      "interface": "swd",
+      "showDevDebugOutput": "raw",
+      "runToEntryPoint": "main",
+      "preLaunchTask": "Sequencer: CMake Build Debug"
+    },
+    {
+      "name": "STM32F446 Debug (OpenOCD) - Sequencer",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/Sequencer",
+      "servertype": "openocd",
+      "executable": "${workspaceFolder}/Sequencer/build/Debug/Sequencer.elf",
+      "device": "STM32F446RE",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "runToEntryPoint": "main",
+      "preLaunchTask": "Sequencer: CMake Build Debug"
+    }
+  ]
+}

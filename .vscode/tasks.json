@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sequencer: CMake Configure Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Sequencer"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Sequencer: CMake Build Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Sequencer"
+      },
+      "dependsOn": "Sequencer: CMake Configure Debug",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
