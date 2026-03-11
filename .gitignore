@@ -5,7 +5,7 @@ Thumbs.db
 *.swo
 
 # VS Code local settings and caches
-.vscode/
+.claude/
 *.code-workspace
 
 # CMake and Ninja build artifacts (all projects)
