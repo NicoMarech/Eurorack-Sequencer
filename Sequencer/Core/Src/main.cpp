@@ -40,6 +40,10 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 std::uint16_t EncoderVal;
+constexpr std::uint32_t gTim3TickHz = 2500U;
+constexpr std::uint32_t gLedSwitchPeriodTicks = gTim3TickHz;
+volatile std::uint8_t gLedIndex = 0U;
+volatile bool gLedUpdatePending = false;
 
 /* USER CODE END PV */
 
@@ -67,6 +71,7 @@ int main(void)
     /* MCU Configuration--------------------------------------------------------*/
 
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+
     HAL_Init();
 
     /* USER CODE BEGIN Init */
@@ -85,13 +90,26 @@ int main(void)
     MX_SPI2_Init();
     MX_USART2_UART_Init();
     MX_TIM2_Init();
+    MX_TIM3_Init();
     /* USER CODE BEGIN 2 */
     Lcd1602 lcd;
     LedMatrix ledMatrix;
     lcd.init();
     lcd.setCursor(0, 0);
     lcd.print("Hello world!");
-    HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL);
+    if (HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    if (HAL_TIM_Base_Start_IT(&htim3) != HAL_OK)
+    {
+        Error_Handler();
+    }
+
+    /*HAL_NVIC_ClearPendingIRQ(TIM3_IRQn);
+    HAL_NVIC_EnableIRQ(TIM3_IRQn);
+    __HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);*/
 
     /* USER CODE END 2 */
 
@@ -103,17 +121,15 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
         EncoderVal=__HAL_TIM_GET_COUNTER(&htim2);
-        lcd.setCursor(0, 0);
-        lcd.print("Encoder : " + std::to_string(EncoderVal));
+        //lcd.setCursor(0, 0);
+        //lcd.print("Encoder : " + std::to_string(EncoderVal));
 
-        ledMatrix.setLed(0U);
-        HAL_Delay(500);
-        //ledMatrix.clear();
-        HAL_Delay(500);
-        ledMatrix.setLed(1U);
-        HAL_Delay(500);
-        //ledMatrix.clear();
-        HAL_Delay(500);
+        if (gLedUpdatePending)
+        {
+            const std::uint8_t currentLed = gLedIndex;
+            gLedUpdatePending = false;
+            ledMatrix.setLed(currentLed);
+        }
     }
     /* USER CODE END 3 */
 }
@@ -165,6 +181,22 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM3)
+    {
+        static std::uint32_t tim3Ticks = 0U;
+
+        ++tim3Ticks;
+        if (tim3Ticks >= gLedSwitchPeriodTicks)
+        {
+            tim3Ticks = 0U;
+            gLedIndex = static_cast<std::uint8_t>((gLedIndex + 1U) % 16U);
+            gLedUpdatePending = true;
+        }
+    }
+}
 
 /* USER CODE END 4 */
 
