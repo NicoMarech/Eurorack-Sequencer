@@ -107,10 +107,6 @@ int main(void)
         Error_Handler();
     }
 
-    /*HAL_NVIC_ClearPendingIRQ(TIM3_IRQn);
-    HAL_NVIC_EnableIRQ(TIM3_IRQn);
-    __HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);*/
-
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -120,9 +116,9 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        EncoderVal=__HAL_TIM_GET_COUNTER(&htim2);
-        //lcd.setCursor(0, 0);
-        //lcd.print("Encoder : " + std::to_string(EncoderVal));
+        EncoderVal = __HAL_TIM_GET_COUNTER(&htim2);
+        lcd.setCursor(0, 0);
+        lcd.print("Encoder : " + std::to_string(EncoderVal));
 
         if (gLedUpdatePending)
         {
