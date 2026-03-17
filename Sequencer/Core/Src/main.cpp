@@ -14,6 +14,7 @@
 #include "usart.h"
 #include "lcd1602.h"
 #include "sequencer_LedMatrix.h"
+#include "mcp4822.h"
 #include <string>
 #include <cstdint>
 
@@ -88,15 +89,20 @@ int main(void)
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
     MX_SPI2_Init();
+    MX_SPI3_Init();
     MX_USART2_UART_Init();
     MX_TIM2_Init();
     MX_TIM3_Init();
     /* USER CODE BEGIN 2 */
     Lcd1602 lcd;
     LedMatrix ledMatrix;
+    Mcp4822 mcp4822;
     lcd.init();
     lcd.setCursor(0, 0);
     lcd.print("Hello world!");
+    mcp4822.init();
+    mcp4822.writeRaw(Mcp4822::Channel::A, 2048U, Mcp4822::Gain::X1, true);
+    mcp4822.writeRaw(Mcp4822::Channel::B, 1024U, Mcp4822::Gain::X1, true);  
     if (HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL) != HAL_OK)
     {
         Error_Handler();
@@ -116,9 +122,9 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        EncoderVal = __HAL_TIM_GET_COUNTER(&htim2);
-        lcd.setCursor(0, 0);
-        lcd.print("Encoder : " + std::to_string(EncoderVal));
+        //EncoderVal = __HAL_TIM_GET_COUNTER(&htim2);
+        //lcd.setCursor(0, 0);
+        //lcd.print("Encoder : " + std::to_string(EncoderVal));
 
         if (gLedUpdatePending)
         {
