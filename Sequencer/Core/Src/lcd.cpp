@@ -8,9 +8,9 @@ static void LCD_Write4Bits(std::uint8_t nibble)
     HAL_GPIO_WritePin(LCD_D6_GPIO_Port, LCD_D6_Pin, (nibble & 0x04U) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     HAL_GPIO_WritePin(LCD_D7_GPIO_Port, LCD_D7_Pin, (nibble & 0x08U) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
-    HAL_GPIO_WritePin(LCD_Enable_GPIO_Port, LCD_Enable_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(LCD_ENABLE_GPIO_Port, LCD_ENABLE_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
-    HAL_GPIO_WritePin(LCD_Enable_GPIO_Port, LCD_Enable_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(LCD_ENABLE_GPIO_Port, LCD_ENABLE_Pin, GPIO_PIN_RESET);
     HAL_Delay(1);
 }
 
@@ -33,7 +33,7 @@ static void LCD_SendData(std::uint8_t data)
 void LCD_Init(void)
 {
     HAL_GPIO_WritePin(LCD_RS_GPIO_Port, LCD_RS_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(LCD_Enable_GPIO_Port, LCD_Enable_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(LCD_ENABLE_GPIO_Port, LCD_ENABLE_Pin, GPIO_PIN_RESET);
 
     HAL_Delay(50);
 
