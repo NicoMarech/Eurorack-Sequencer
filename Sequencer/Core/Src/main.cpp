@@ -14,8 +14,8 @@
 #include "usart.h"
 #include "lcd1602.h"
 #include "sequencer_LedMatrix.h"
+#include "sequencer.h"
 #include "mcp4822.h"
-#include <string>
 #include <cstdint>
 
 /* Private includes ----------------------------------------------------------*/
@@ -40,12 +40,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-std::uint16_t EncoderVal;
-constexpr std::uint32_t gTim3TickHz = 2500U;
-constexpr std::uint32_t gLedSwitchPeriodTicks = gTim3TickHz;
-volatile std::uint8_t gLedIndex = 0U;
-volatile bool gLedUpdatePending = false;
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -101,17 +95,13 @@ int main(void)
     lcd.setCursor(0, 0);
     lcd.print("Hello world!");
     mcp4822.init();
-    mcp4822.writeRaw(Mcp4822::Channel::A, 2048U, Mcp4822::Gain::X1, true);
-    mcp4822.writeRaw(Mcp4822::Channel::B, 1024U, Mcp4822::Gain::X1, true);  
-    if (HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL) != HAL_OK)
+    if (HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL) != HAL_OK)
     {
         Error_Handler();
     }
 
-    if (HAL_TIM_Base_Start_IT(&htim3) != HAL_OK)
-    {
-        Error_Handler();
-    }
+    Sequencer sequencer(ledMatrix, mcp4822, htim2, 120U, 4U);
+    sequencer.init();
 
     /* USER CODE END 2 */
 
@@ -122,16 +112,7 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        //EncoderVal = __HAL_TIM_GET_COUNTER(&htim2);
-        //lcd.setCursor(0, 0);
-        //lcd.print("Encoder : " + std::to_string(EncoderVal));
-
-        if (gLedUpdatePending)
-        {
-            const std::uint8_t currentLed = gLedIndex;
-            gLedUpdatePending = false;
-            ledMatrix.setLed(currentLed);
-        }
+        sequencer.update();
     }
     /* USER CODE END 3 */
 }
@@ -186,18 +167,7 @@ void SystemClock_Config(void)
 
 extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    if (htim->Instance == TIM3)
-    {
-        static std::uint32_t tim3Ticks = 0U;
-
-        ++tim3Ticks;
-        if (tim3Ticks >= gLedSwitchPeriodTicks)
-        {
-            tim3Ticks = 0U;
-            gLedIndex = static_cast<std::uint8_t>((gLedIndex + 1U) % 16U);
-            gLedUpdatePending = true;
-        }
-    }
+    (void)htim;
 }
 
 /* USER CODE END 4 */
