@@ -12,9 +12,13 @@
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
+#include "dma.h"
 #include "lcd1602.h"
 #include "sequencer_LedMatrix.h"
 #include "mcp4822.h"
+#include "mcp23S17.h"
+#include "spi_abstraction.h"
+#include <cstdio>
 #include <string>
 #include <cstdint>
 
@@ -56,6 +60,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static Mcp23s17 gMcp23s17;
 
 /* USER CODE END 0 */
 
@@ -88,6 +93,8 @@ int main(void)
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_DMA_Init();
+    MX_SPI1_Init();
     MX_SPI2_Init();
     MX_SPI3_Init();
     MX_USART2_UART_Init();
@@ -101,6 +108,7 @@ int main(void)
     lcd.setCursor(0, 0);
     lcd.print("Hello world!");
     mcp4822.init();
+    gMcp23s17.init();
     mcp4822.writeRaw(Mcp4822::Channel::A, 2048U, Mcp4822::Gain::X1, true);
     mcp4822.writeRaw(Mcp4822::Channel::B, 1024U, Mcp4822::Gain::X1, true);  
     if (HAL_TIM_Encoder_Start_IT(&htim2, TIM_CHANNEL_ALL) != HAL_OK)
@@ -131,6 +139,32 @@ int main(void)
             const std::uint8_t currentLed = gLedIndex;
             gLedUpdatePending = false;
             ledMatrix.setLed(currentLed);
+        }
+
+        gMcp23s17.processInterrupts();
+
+        if (gMcp23s17.consumePortAChanged())
+        {
+            char lineBuffer[17] = {0};
+            const std::uint8_t portA = gMcp23s17.getPortAValue();
+            (void)std::snprintf(lineBuffer, sizeof(lineBuffer), "A:%02X", portA);
+
+            lcd.setCursor(0, 0);
+            lcd.print("                ");
+            lcd.setCursor(0, 0);
+            lcd.print(lineBuffer);
+        }
+
+        if (gMcp23s17.consumePortBChanged())
+        {
+            char lineBuffer[17] = {0};
+            const std::uint8_t portB = gMcp23s17.getPortBValue();
+            (void)std::snprintf(lineBuffer, sizeof(lineBuffer), "B:%02X", portB);
+
+            lcd.setCursor(1, 0);
+            lcd.print("                ");
+            lcd.setCursor(1, 0);
+            lcd.print(lineBuffer);
         }
     }
     /* USER CODE END 3 */
@@ -198,6 +232,26 @@ extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
             gLedUpdatePending = true;
         }
     }
+}
+
+extern "C" void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+    SpiAbstraction::dispatchTxComplete(hspi);
+}
+
+extern "C" void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+    SpiAbstraction::dispatchTxRxComplete(hspi);
+}
+
+extern "C" void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi)
+{
+    SpiAbstraction::dispatchError(hspi);
+}
+
+extern "C" void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    gMcp23s17.onGpioInterrupt(GPIO_Pin);
 }
 
 /* USER CODE END 4 */

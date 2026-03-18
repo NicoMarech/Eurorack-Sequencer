@@ -48,6 +48,13 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    Core/Src/lcd.cpp
+    Core/Src/mcp4822.cpp
+    Core/Src/mcp23S17.cpp
+    Core/Src/shiftRegister.cpp
+    Core/Src/sequencer.cpp
+    Core/Src/sequencer_LedMatrix.cpp
+    Core/Src/spi_abstraction.cpp
 )
 
 # Add include paths

@@ -59,6 +59,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define B1_EXTI_IRQn EXTI15_10_IRQn
 #define SHIFTRES_RCLK_Pin GPIO_PIN_0
 #define SHIFTRES_RCLK_GPIO_Port GPIOC
 #define ENCODER_CNTUP_Pin GPIO_PIN_0
@@ -71,26 +72,30 @@ void Error_Handler(void);
 #define USART_RX_GPIO_Port GPIOA
 #define DAC_CS_Pin GPIO_PIN_4
 #define DAC_CS_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_5
-#define LD2_GPIO_Port GPIOA
 #define LCD_D4_Pin GPIO_PIN_10
 #define LCD_D4_GPIO_Port GPIOB
+#define LCD_D5_Pin GPIO_PIN_8
+#define LCD_D5_GPIO_Port GPIOC
+#define LCD_D6_Pin GPIO_PIN_9
+#define LCD_D6_GPIO_Port GPIOC
 #define LCD_ENABLE_Pin GPIO_PIN_8
 #define LCD_ENABLE_GPIO_Port GPIOA
 #define LCD_RS_Pin GPIO_PIN_9
 #define LCD_RS_GPIO_Port GPIOA
 #define LCD_D7_Pin GPIO_PIN_10
 #define LCD_D7_GPIO_Port GPIOA
+#define IOEXPANDER_INTB_Pin GPIO_PIN_11
+#define IOEXPANDER_INTB_GPIO_Port GPIOA
+#define IOEXPANDER_INTB_EXTI_IRQn EXTI15_10_IRQn
+#define IOEXPANDER_INTA_Pin GPIO_PIN_12
+#define IOEXPANDER_INTA_GPIO_Port GPIOA
+#define IOEXPANDER_INTA_EXTI_IRQn EXTI15_10_IRQn
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-#define LCD_D5_Pin GPIO_PIN_4
-#define LCD_D5_GPIO_Port GPIOB
-#define LCD_D6_Pin GPIO_PIN_5
-#define LCD_D6_GPIO_Port GPIOB
+#define IOEXPANDER_CS_Pin GPIO_PIN_15
+#define IOEXPANDER_CS_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
