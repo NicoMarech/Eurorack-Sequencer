@@ -24,10 +24,10 @@ Sequencer::Sequencer(LedMatrix &inLedMatrix,
 void Sequencer::init()
 {
     static constexpr std::array<std::uint16_t, sStepCount> kInitialStepValues = {
-        0U, 1024U, 2048U, 3072U,
-        512U, 1536U, 2560U, 3584U,
-        768U, 1792U, 2816U, 3840U,
-        256U, 1280U, 2304U, 3328U
+        3914U, 3880U, 3846U, 3812U,
+        3778U, 3744U, 3709U, 3685U,
+        3914U, 3880U, 3846U, 3812U,
+        3778U, 3744U, 3709U, 3685U
     };
 
     for (std::uint8_t stepIndex = 0U; stepIndex < sStepCount; ++stepIndex)

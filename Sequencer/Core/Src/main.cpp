@@ -100,7 +100,7 @@ int main(void)
         Error_Handler();
     }
 
-    Sequencer sequencer(ledMatrix, mcp4822, htim2, 120U, 4U);
+    Sequencer sequencer(ledMatrix, mcp4822, htim2, 30U, 4U);
     sequencer.init();
 
     /* USER CODE END 2 */
